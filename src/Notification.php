@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Pushok package.
+ * This file is part of the YSPush package.
  *
  * (c) Arthur Edamov <edamov@gmail.com>
  *
@@ -9,13 +9,13 @@
  * file that was distributed with this source code.
  */
 
-namespace Pushok;
+namespace YSPush;
 
 use DateTime;
 
 /**
  * Class Notification
- * @package Pushok
+ * @package YSPush
  */
 class Notification
 {

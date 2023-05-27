@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Pushok package.
+ * This file is part of the YSPush package.
  *
  * (c) Arthur Edamov <edamov@gmail.com>
  *
@@ -9,12 +9,12 @@
  * file that was distributed with this source code.
  */
 
-namespace Pushok\Tests;
+namespace YSPush\Tests;
 
 use Exception;
 use PHPUnit\Framework\TestCase;
-use Pushok\InvalidPayloadException;
-use Pushok\Payload;
+use YSPush\InvalidPayloadException;
+use YSPush\Payload;
 
 class InvalidPayloadExceptionTest extends TestCase
 {

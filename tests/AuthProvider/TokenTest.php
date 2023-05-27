@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Pushok package.
+ * This file is part of the YSPush package.
  *
  * (c) Arthur Edamov <edamov@gmail.com>
  *
@@ -9,13 +9,13 @@
  * file that was distributed with this source code.
  */
 
-namespace Pushok\AuthProvider;
+namespace YSPush\AuthProvider;
 
 use PHPUnit\Framework\TestCase;
-use Pushok\AuthProviderInterface;
-use Pushok\Notification;
-use Pushok\Payload;
-use Pushok\Request;
+use YSPush\AuthProviderInterface;
+use YSPush\Notification;
+use YSPush\Payload;
+use YSPush\Request;
 
 class TokenTest extends TestCase
 {

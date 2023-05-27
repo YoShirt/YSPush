@@ -1,5 +1,5 @@
 {
-    "name": "edamov/pushok",
+    "name": "yoshirt/yspush",
     "type": "library",
     "description": "PHP client for Apple Push Notification Service (APNs) - Send push notifications to iOS using the new APNs HTTP/2 protocol with token-based (JWT with p8 private key) or certificate-based authentication",
     "keywords": [
@@ -8,7 +8,7 @@
         "p8",
         "php apns"
     ],
-    "homepage": "https://github.com/edamov/pushok",
+    "homepage": "https://github.com/yoshirt/yspush",
     "license": "MIT",
     "authors": [
         {
@@ -38,7 +38,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Pushok\\": "src/"
+            "YSPush\\": "src/"
         }
     },
     "autoload-dev": {

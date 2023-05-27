@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Pushok package.
+ * This file is part of the YSPush package.
  *
  * (c) Arthur Edamov <edamov@gmail.com>
  *
@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Pushok\AuthProvider;
+namespace YSPush\AuthProvider;
 
 use Jose\Component\Core\JWK;
 use Jose\Component\KeyManagement\JWKFactory;
@@ -17,12 +17,12 @@ use Jose\Component\Core\AlgorithmManager;
 use Jose\Component\Signature\JWSBuilder;
 use Jose\Component\Signature\Algorithm\ES512;
 use Jose\Component\Signature\Serializer\CompactSerializer;
-use Pushok\AuthProviderInterface;
-use Pushok\Request;
+use YSPush\AuthProviderInterface;
+use YSPush\Request;
 
 /**
  * Class Token
- * @package Pushok\AuthProvider
+ * @package YSPush\AuthProvider
  *
  * @see http://bit.ly/communicating-with-apns
  */

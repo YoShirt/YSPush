@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Pushok package.
+ * This file is part of the YSPush package.
  *
  * (c) Arthur Edamov <edamov@gmail.com>
  *
@@ -9,11 +9,11 @@
  * file that was distributed with this source code.
  */
 
-namespace Pushok;
+namespace YSPush;
 
 use Countable;
-use Pushok\Payload\Alert;
-use Pushok\Payload\Sound;
+use YSPush\Payload\Alert;
+use YSPush\Payload\Sound;
 
 // Polyfill for PHP 7.2
 if (!function_exists('is_countable')) {
@@ -26,7 +26,7 @@ if (!function_exists('is_countable')) {
 /**
  * Class Payload
  *
- * @package Pushok
+ * @package YSPush
  *
  * @see     http://bit.ly/payload-key-reference
  */
@@ -47,6 +47,7 @@ class Payload implements \JsonSerializable
     const PAYLOAD_RELEVANCE_SCORE_KEY = 'relevance-score';
     const PAYLOAD_STALE_DATE_KEY = 'stale-date';
     const PAYLOAD_CONTENT_STATE_KEY = 'content-state';
+    const PAYLOAD_PUSH_CAMPAIGN_KEY = 'ys_pid';
 
     const PAYLOAD_HTTP2_REGULAR_NOTIFICATION_MAXIMUM_SIZE = 4096;
     const PAYLOAD_HTTP2_VOIP_NOTIFICATION_MAXIMUM_SIZE = 5120;
@@ -457,6 +458,37 @@ class Payload implements \JsonSerializable
     }
 
     /**
+     * Get Push Id.
+     *
+     * @param $key
+     *
+     * @return mixed
+     * @throws InvalidPayloadException
+     */
+ 
+    public function getCampaignId()
+    {
+        return $this->campaignId;
+    }
+
+    /**
+     * Set Push Id.
+     *
+     * @param array $value
+     *
+     * @return Payload
+     */
+    public function setCampaignId(string $value): Payload
+    {
+        $this->campaignId = $value;
+
+        return $this;
+    }
+
+
+
+
+    /**
      * Set push type for Payload.
      *
      * @param string $pushType
@@ -663,7 +695,9 @@ class Payload implements \JsonSerializable
         if (is_array($this->urlArgs)) {
             $payload[self::PAYLOAD_ROOT_KEY]->{self::PAYLOAD_URL_ARGS_KEY} = $this->urlArgs;
         }
-
+        if (is_string($this->campaignId)) {
+            $payload[self::PAYLOAD_ROOT_KEY]->{self::PAYLOAD_PUSH_CAMPAIGN_KEY} = $this->campaignId;
+        }
         if (is_countable($this->customValues) && count($this->customValues)) {
             $payload = array_merge($payload, $this->customValues);
         }

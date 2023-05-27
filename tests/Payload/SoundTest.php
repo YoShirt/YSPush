@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Pushok package.
+ * This file is part of the YSPush package.
  *
  * (c) Arthur Edamov <edamov@gmail.com>
  *
@@ -9,10 +9,10 @@
  * file that was distributed with this source code.
  */
 
-namespace Pushok\Tests\Payload;
+namespace YSPush\Tests\Payload;
 
 use PHPUnit\Framework\TestCase;
-use Pushok\Payload\Sound;
+use YSPush\Payload\Sound;
 
 class SoundTest extends TestCase
 {

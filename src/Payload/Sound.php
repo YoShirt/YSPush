@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Pushok package.
+ * This file is part of the YSPush package.
  *
  * (c) Arthur Edamov <edamov@gmail.com>
  *
@@ -9,12 +9,12 @@
  * file that was distributed with this source code.
  */
 
-namespace Pushok\Payload;
+namespace YSPush\Payload;
 
 /**
  * Class Sound
  *
- * @package Pushok\Payload
+ * @package YSPush\Payload
  *
  * @see http://bit.ly/payload-key-reference
  */

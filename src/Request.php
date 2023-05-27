@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Pushok package.
+ * This file is part of the YSPush package.
  *
  * (c) Arthur Edamov <edamov@gmail.com>
  *
@@ -9,11 +9,11 @@
  * file that was distributed with this source code.
  */
 
-namespace Pushok;
+namespace YSPush;
 
 /**
  * Class Request
- * @package Pushok
+ * @package YSPush
  *
  * @see http://bit.ly/communicating-with-apns
  */

@@ -1,4 +1,4 @@
-# Pushok
+# YSPush
 
 [![PHP >= 8.1](https://img.shields.io/badge/php-%3E%3D%208.1-8892BF.svg?style=flat-square)](https://php.net/)
 [![Build Status][ico-travis]][link-travis]
@@ -11,7 +11,7 @@
 
 ## Do you like the library? Please consider [donating](https://www.buymeacoffee.com/uasupport) to support Ukraine 🇺🇦
 
-Pushok is a simple PHP library for sending push notifications to APNs. 
+YSPush is a simple PHP library for sending push notifications to APNs. 
 
 ## Features
 
@@ -46,11 +46,11 @@ Using JWT token. See [Handling Notification Responses from APNs](https://develop
 <?php
 require __DIR__ . '/vendor/autoload.php';
 
-use Pushok\AuthProvider;
-use Pushok\Client;
-use Pushok\Notification;
-use Pushok\Payload;
-use Pushok\Payload\Alert;
+use YSPush\AuthProvider;
+use YSPush\Client;
+use YSPush\Notification;
+use YSPush\Payload;
+use YSPush\Payload\Alert;
 
 $options = [
     'key_id' => 'AAAABBBBCC', // The Key ID obtained from Apple developer account
